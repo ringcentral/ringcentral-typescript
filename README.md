@@ -6,7 +6,7 @@ A stricter and TypeScript-enabled version of https://github.com/ringcentral/ring
 ## Installation
 
 ```bash
-$ npm install eslint ringcentral-typescript --save-dev
+$ npm install eslint eslint-config-ringcentral-typescript --save-dev
 ```
 
 Add this to `scripts` section of `package.json`:
