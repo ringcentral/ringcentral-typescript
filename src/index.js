@@ -1,7 +1,3 @@
-const jsExtensions = ['.js', '.jsx'];
-const tsExtensions = ['.ts', '.tsx'];
-const allExtensions = jsExtensions.concat(tsExtensions);
-
 module.exports = {
     root: true,
     extends: [
@@ -14,6 +10,7 @@ module.exports = {
         'plugin:prettier/recommended', // must be belowe ringcentral to override react prefs
         'prettier/react', // must be belowe ringcentral to override react prefs
         'plugin:@typescript-eslint/recommended', // must be below react-app & ringcentral to enable proper parser
+        'plugin:import/typescript',
     ],
     rules: {
         'prettier/prettier': [
@@ -36,15 +33,5 @@ module.exports = {
         react: {
             version: 'detect',
         },
-        //FIXME Remove when https://github.com/benmosher/eslint-plugin-import/issues/1256 is fixed
-        'import/resolver': {
-            node: {
-                extensions: allExtensions,
-            },
-        },
-        'import/parsers': {
-            '@typescript-eslint/parser': tsExtensions,
-        },
-        'import/extensions': allExtensions,
     },
 };
