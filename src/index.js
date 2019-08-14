@@ -5,7 +5,7 @@ module.exports = {
         'plugin:import/recommended',
         'plugin:jsx-a11y/recommended',
         'plugin:react/recommended',
-        'react-app',
+        require.resolve('eslint-config-react-app'),
         'ringcentral',
         'plugin:prettier/recommended', // must be belowe ringcentral to override react prefs
         'prettier/react', // must be belowe ringcentral to override react prefs
