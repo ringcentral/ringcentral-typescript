@@ -45,6 +45,19 @@ Create `.prettierrc` (optional):
 
 :warning: Keep in mind that anything you set in `.prettierrc` may be overridden by config specified in this repo.
 
+You may use following trick in `.eslintrc` if you need to take control:
+
+```js
+const prettierOptions = JSON.parse(require('fs').readFileSync('./.prettierrc').toString());
+
+module.exports = {
+  ...
+  rules: {
+    'prettier/prettier': ['warn', Object.assign({}, prettierOptions)]
+  }
+};
+```
+
 Create a `.editorconfig` (optional):
 
 ```ini
