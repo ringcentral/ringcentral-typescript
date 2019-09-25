@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ringcentral-typescript",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "",
   "main": "src/index.js",
   "scripts": {
@@ -24,6 +24,7 @@
     "eslint-plugin-react": "7.14.3",
     "eslint-plugin-react-hooks": "2.0.1",
     "eslint-plugin-ringcentral": "1.0.6",
+    "eslint-plugin-sonarjs": "0.4.0",
     "prettier": "1.18.2"
   },
   "peerDependencies": {
