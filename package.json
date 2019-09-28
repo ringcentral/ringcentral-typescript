@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ringcentral-typescript",
-  "version": "2.1.1",
+  "version": "0.0.0",
   "description": "",
   "main": "src/index.js",
   "scripts": {
@@ -31,11 +31,11 @@
     "eslint": ">=6"
   },
   "devDependencies": {
-    "eslint": "6.2.2",
-    "husky": "3.0.4",
-    "lint-staged": "9.2.5",
-    "react": "16.9.0",
-    "typescript": "3.5.3"
+    "eslint": "6.4.0",
+    "husky": "3.0.7",
+    "lint-staged": "9.4.0",
+    "react": "16.10.0",
+    "typescript": "3.6.3"
   },
   "repository": {
     "type": "git",
