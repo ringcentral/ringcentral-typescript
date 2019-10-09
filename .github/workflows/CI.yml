@@ -22,7 +22,10 @@ jobs:
         npm run test
       env:
         CI: true
-    - run: npm version $(echo $GITHUB_REF | cut -f3 -d/) --git-tag-version=false && npm publish
+    - run: |
+        npm version $(echo $GITHUB_REF | cut -f3 -d/) --git-tag-version=false
+        echo "//registry.npmjs.org/:_authToken=${{ secrets.NODE_AUTH_TOKEN }}" > ~/.npmrc
+        npm publish
       if: contains(github.ref, '/tags/')
       env:
         NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
