@@ -1,0 +1,18 @@
+language: node_js
+
+node_js: stable
+
+cache: npm
+
+before_script: npm run lint:all
+
+before_deploy: npm version $TRAVIS_TAG --git-tag-version=false
+
+deploy:
+- provider: npm
+  email: kirill.konshin@gmail.com
+  api_key: $NPM_TOKEN
+  skip_cleanup: true
+  on:
+    tags: true
+    repo: ringcentral/ringcentral-typescript
